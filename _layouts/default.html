@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <style>
+    html {
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    a { color: #0066cc; }
+    code {
+      font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, monospace;
+      background: none;
+    }
+    a code { color: inherit; }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100vh;
+      padding: 2rem 1.5rem;
+      border-right: 1px solid #eee;
+      box-sizing: border-box;
+    }
+    .sidebar nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 2.5rem;
+    }
+    .sidebar nav a {
+      text-decoration: none;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    .sidebar nav a:hover {
+      color: #0066cc;
+    }
+    .mobile-title {
+      display: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    main {
+      max-width: 800px;
+      padding: 2rem;
+      margin-left: 200px;
+    }
+    @media (max-width: 1000px) {
+      .sidebar {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding: 1rem 2rem;
+        background: white;
+        z-index: 100;
+      }
+      .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem 1.5rem;
+        margin-top: 0;
+      }
+      .mobile-title {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+      main {
+        margin-left: 0;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+    .card h3 { margin-top: 0; }
+    .card p { margin-bottom: 0; color: #666; }
+    .section { margin: 2.5rem 0; }
+    .section h2 {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.5rem;
+    }
+    .audience {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .paper-scroll {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      padding: 0.5rem 2rem 1rem calc(50vw - 400px + 2rem);
+      margin-left: calc(-50vw + 400px - 2rem);
+      margin-right: calc(-50vw + 400px - 2rem);
+      width: 100vw;
+    }
+    @media (max-width: 864px) {
+      .paper-scroll {
+        padding-left: 2rem;
+        margin-left: -2rem;
+        margin-right: -2rem;
+      }
+    }
+    .paper-card {
+      flex: 0 0 300px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+    .paper-card .title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .paper-card .authors {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+    .paper-card .venue {
+      font-size: 0.85rem;
+      color: #999;
+    }
+    .logo-wall {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    .paper-list {
+      list-style: none;
+      padding: 0;
+    }
+    .paper-list li {
+      margin-bottom: 1.25rem;
+    }
+    .paper-list .title {
+      font-weight: 600;
+    }
+    .paper-list .meta {
+      font-size: 0.85rem;
+      color: #666;
+    }
+    .logo-wall span {
+      color: #666;
+      font-size: 0.9rem;
+    }
+    .logo-wall img {
+      height: 2rem;
+      width: auto;
+    }
+    .logo-wall img.logo-harvard {
+      height: 7rem;
+    }
+    .logo-wall img.logo-hpi {
+      height: 3rem;
+    }
+    .logo-wall img.logo-helsinki {
+      height: 7rem;
+    }
+    @media (max-width: 600px) {
+      .logo-wall {
+        flex-wrap: nowrap;
+        gap: 1rem;
+      }
+      .logo-wall img {
+        height: 1.2rem;
+      }
+      .logo-wall img.logo-harvard {
+        height: 4.2rem;
+      }
+      .logo-wall img.logo-hpi {
+        height: 1.8rem;
+      }
+      .logo-wall img.logo-helsinki {
+        height: 4.2rem;
+      }
+    }
+    .people-grid {
+      display: flex;
+      gap: 3rem;
+      margin-top: 1.5rem;
+      justify-content: center;
+    }
+    .person {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .person img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.75rem;
+    }
+    .person a {
+      font-weight: 600;
+    }
+    .person .role {
+      font-size: 0.85rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <span class="mobile-title">Interpretable DP</span>
+    <nav>
+      <a href="#suite">Software</a>
+      <a href="#about">About</a>
+    </nav>
+  </div>
+  <main>
+    {{ content }}
+  </main>
+</body>
+</html>

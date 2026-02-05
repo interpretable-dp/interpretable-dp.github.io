@@ -1,0 +1,12 @@
+title: Interpretable DP
+description: A site about interpretable differential privacy
+url: https://interpretable-dp.github.io
+
+# Build settings
+markdown: kramdown
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
