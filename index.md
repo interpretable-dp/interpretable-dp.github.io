@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Interpretable DP
 ---
 
 <h1 id="suite">Interpretable DP</h1>
