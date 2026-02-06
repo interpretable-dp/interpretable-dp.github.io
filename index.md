@@ -5,7 +5,7 @@ title: Interpretable DP
 
 <h1 id="suite">Interpretable DP</h1>
 
-A suite of tools for statistics and machine learning with interpretable risk-based provable privacy guarantees for easy auditability and communication of the guarantees in regulated environments.
+A suite of tools for statistics and machine learning with interpretable risk-based privacy guarantees for easy auditability and communication in regulated environments.
 
 <div class="section">
 <h3>Technical Layer</h3>
