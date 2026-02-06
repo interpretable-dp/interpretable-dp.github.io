@@ -37,7 +37,7 @@ A suite of tools for statistics and machine learning with interpretable risk-bas
 
 <h3 id="publications">Publications</h3>
 
-This software suite is a result of several independent scientific collaborations.
+This software suite has emerged as a result of several independent scientific collaborations.
 <ul class="paper-list">
   <li>
     <div class="title"><a href="https://arxiv.org/abs/2407.02191">Attack-Aware Noise Calibration for Differential Privacy</a></div>
@@ -78,5 +78,5 @@ This software suite is a result of several independent scientific collaborations
 
 <h3 id="funding">Funding</h3>
 
-The effort is partially funded via Swiss National Science Foundation (SNF):<br>
+The effort is partially funded by the Swiss National Science Foundation (SNF):<br>
 <a href="https://data.snf.ch/grants/grant/237378">Bridging Regulatory Data Protection Standards and Model Sharing in Healthcare</a>
