@@ -3,9 +3,13 @@ layout: default
 title: Interpretable DP
 ---
 
-<h1 id="suite">Interpretable DP</h1>
-
-A suite of tools for statistics and machine learning with interpretable risk-based privacy guarantees for easy auditability and communication in regulated environments.
+<div id="suite" class="hero">
+  <img src="/images/interpretable_dp_logo_wide.svg" alt="Interpretable DP">
+  <div>
+    <h1>Interpretable DP</h1>
+    <p>A suite of tools for statistics and machine learning with interpretable risk-based privacy guarantees for easy auditability and communication in regulated environments.</p>
+  </div>
+</div>
 
 <div class="section">
 <h3>Technical Layer</h3>
