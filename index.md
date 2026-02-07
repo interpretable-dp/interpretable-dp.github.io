@@ -13,12 +13,12 @@ A suite of tools for statistics and machine learning with interpretable risk-bas
 
 <div class="card-grid">
   <div class="card">
-    <h3><a href="https://github.com/Felipe-Gomez/riskcal"><code>riskcal</code></a></h3>
+    <h3><a href="https://github.com/interpretable-dp/riskcal"><code>riskcal</code></a></h3>
     <p>Tools for computing f-DP trade-off curves for differentially private algorithms, and calibrating their noise scale to operational privacy risk measures (attack advantage, or attack TPR and FPR).</p>
     <p><code>pip install riskcal</code></p>
   </div>
   <div class="card">
-    <h3><a href="https://github.com/Felipe-Gomez/gdp-numeric/"><code>gdpnum</code></a></h3>
+    <h3><a href="https://github.com/interpretable-dp/gdpnum"><code>gdpnum</code></a></h3>
     <p>Correct numerical accounting in terms of Gaussian differential privacy for more interpretable
     and auditable guarantees in privacy-preserving machine learning.</p>
     <p><code>pip install gdpnum</code></p>
