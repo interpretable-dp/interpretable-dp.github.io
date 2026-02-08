@@ -23,8 +23,7 @@ title: Interpretable DP
   </div>
   <div class="card">
     <h3><a href="https://github.com/interpretable-dp/gdpnum"><code>gdpnum</code></a></h3>
-    <p>Correct numerical accounting in terms of Gaussian differential privacy for more interpretable
-    and auditable guarantees in privacy-preserving machine learning.</p>
+    <p>Tools for numerically computing the correct, non-asymptotic Gaussian Differential Privacy (GDP) guarantees for DP-SGD or similar privacy-preserving algorithms.</p>
     <p><code>pip install gdpnum</code></p>
   </div>
 </div>
@@ -34,7 +33,13 @@ title: Interpretable DP
 <h3>Application Layer</h3>
 <p class="audience">Audience: Researchers, data scientists</p>
 
-<p>Coming soon: Synthetic data with interpretable privacy guarantees.</p>
+<div class="card-grid">
+  <div class="card">
+    <h3><a href="https://github.com/interpretable-dp/risksyn"><code>risksyn</code></a></h3>
+    <p>Synthetic data generation with interpretable privacy guarantees in terms of attack risk.</p>
+    <!-- <p><code>pip install risksyn</code></p> -->
+  </div>
+</div>
 </div>
 
 <h2 id="about">About</h2>
