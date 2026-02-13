@@ -16,7 +16,7 @@
   var PARAM_META = {
     mu:      { label: "μ", min: 0, max: 50, step: 0.1, default: 1.0 },
     rho:     { label: "ρ", min: 0, max: 50, step: 0.1, default: 0.5 },
-    eta:     { label: "η", min: 0, max: 1,  step: 0.01, default: 0.38 },
+    eta:     { label: "η", min: 0, max: 1,  step: 0.01, default: 0.25 },
     alpha:   { label: "α", min: 0, max: 1, step: 0.001, default: 0.05, slider: true },
     beta:    { label: "β", min: 0, max: 1, step: 0.01, default: 0.80 },
     epsilon: { label: "ε", min: 0, max: 50, step: 0.1, default: 1.0 },
