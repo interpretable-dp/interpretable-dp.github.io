@@ -36,7 +36,7 @@
 
   var state = {
     source: "gdp",
-    target: "zcdp",
+    target: "fdp",
     sourceParams: { mu: 1.0 },
     targetParams: {},
     worker: null,
@@ -525,11 +525,11 @@
       resultEl.textContent = "—";
     }
 
-    // Show warnings/errors for zCDP numeric conversions
+    // Show warnings/errors for numeric conversions
     var warnEl = $("approx-warning");
     if (warnEl) {
       if (result.boundaryHit && state.source === "gdp" && state.target === "adp") {
-        warnEl.textContent = "δ is too small for numerical precision";
+        warnEl.textContent = "Likely numerical issues";
         warnEl.className = "conv-warning";
       } else if (result.boundaryHit) {
         warnEl.textContent = "Optimization failed";

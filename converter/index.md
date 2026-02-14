@@ -240,7 +240,8 @@ permalink: /converter/
 
 <h2 style="text-align:center; margin-bottom:0.25rem"><code>dpconverter</code></h2>
 <p style="text-align:center; color:#666; margin-top:0; margin-bottom:1.5rem; font-size:0.9rem;">
-  Convert between DP, zCDP, GDP, f-DP
+  Convert between pure DP, approximate DP (ADP), total-variation privacy (TVP), zero-concentrated DP
+  (zCDP), Gaussian DP (GDP), f-DP
 </p>
 
 <div class="converter-header">
